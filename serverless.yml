@@ -5,16 +5,12 @@ provider:
   runtime: nodejs6.10
 
 functions:
-  hello:
-    handler: handler.default
+  api:
+    handler: app.handler
     events:
       - http:
-          path: /
-          method: get
-
-  imageResize:
-    handler: handler.contact
-    events:
+         path: /
+         method: ANY
       - http:
-          path: /contact
-          method: get
+         path: /{any+}
+         method: ANY
