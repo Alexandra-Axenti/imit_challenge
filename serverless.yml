@@ -6,15 +6,15 @@ provider:
 
 functions:
   hello:
-    handler: handler.hello
+    handler: handler.default
     events:
       - http:
           path: /
           method: get
 
   imageResize:
-    handler: handler.imageResize
+    handler: handler.contact
     events:
       - http:
-          path: /imageResize
+          path: /contact
           method: get
